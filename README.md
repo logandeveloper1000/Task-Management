@@ -1,46 +1,77 @@
-# Getting Started with Create React App
+# Task Management App (React + TypeScript + Auth0)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This is a task management application built using **React**, **TypeScript**, and **Auth0** authentication. 
+It allows users to log in, create, edit, view, and delete tasks. Tasks have a title, optional description, due date, and completion status.
 
-## Available Scripts
+## Features
+- Secure authentication using Auth0.
+- Create, edit, view, and delete tasks.
+- Mark tasks as completed.
+- Responsive and user-friendly design.
+- Protected routes for authenticated users only.
 
-In the project directory, you can run:
+## Tech Stack
+- **Frontend Framework**: React (TypeScript)
+- **Authentication**: Auth0
+- **State Management**: React Context API
+- **Routing**: React Router
+- **Styling**: CSS
 
-### `npm start`
+## Project Structure
+```
+src/
+  components/        # Reusable UI components
+  context/           # Context for global state (tasks)
+  pages/             # Page components (Dashboard, Create, Edit, View)
+  types/             # TypeScript types
+  App.tsx            # App entry point
+  index.tsx          # React DOM entry point
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation & Setup
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone the repository:
+```bash
+git clone https://github.com/logandeveloper1000/Task-Management
+cd task-management-app
+```
 
-### `npm test`
+2. Install dependencies:
+```bash
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Create a `.env` file in the root of the project and add your Auth0 credentials:
+```
+REACT_APP_AUTH0_DOMAIN=your-auth0-domain
+REACT_APP_AUTH0_CLIENT_ID=your-auth0-client-id
+```
 
-### `npm run build`
+4. Start the development server:
+```bash
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
+- Log in with your Auth0 credentials.
+- Create a new task by clicking the **+ Create Task** button.
+- Edit or delete tasks from the dashboard.
+- View task details in the task detail page.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment
+You can deploy this application to **Vercel** or **Netlify**.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Steps:
+1. Build the project:
+```bash
+npm run build
+```
+2. Deploy the `build` folder using your preferred hosting provider.
+3. Update your Auth0 application settings to include your production URL in:
+   - Allowed Callback URLs
+   - Allowed Logout URLs
+   - Allowed Web Origins
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
+This project is open source and available under the MIT License.
